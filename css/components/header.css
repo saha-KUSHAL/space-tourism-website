@@ -9,7 +9,19 @@ nav{
     padding-left: 4rem;
     padding-top: 1.25rem;
 
+}nav img{
+     height: 3rem;
+     width: 3rem;
+ }
+
+.inline-line{
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-white);
+    opacity: 25%;
+    margin-left: 4rem;
 }
+
 nav ol{
     display: flex;
     color: var(--color-white);
@@ -29,6 +41,8 @@ nav li{
     font-size: 1rem;
     line-height: 19.2%;
     letter-spacing: 0.125rem;
+    position: relative;
+    transition: all 2s ease-in-out;
 }
 nav li::before{
     content: counter(my-counter, decimal-leading-zero);
@@ -39,15 +53,14 @@ nav li a{
     color: var(--color-white);
     text-decoration: none;
 }
-nav img{
-    height: 3rem;
-    width: 3rem;
-}
-
-.inline-line{
-    height: 1px;
+nav li:hover::after{
+    content:"";
+    position: absolute;
+    background-image: linear-gradient(hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0.10));
+    height: 4.875rem;
     width: 100%;
-    background-color: var(--color-white);
-    opacity: 25%;
-    margin-left: 4rem;
+    top: -2.375rem;
+    left: 0;
+    z-index:-1;
+    border-bottom: 3px solid var(--color-white);
 }
