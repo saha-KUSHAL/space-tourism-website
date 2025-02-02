@@ -1,0 +1,57 @@
+.hero{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    margin-inline: 10rem;
+    margin-block:8rem;
+    min-height: 50rem;
+}
+.hero__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 24px;
+}
+.hero .hero__text .intro-text{
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.75rem;
+    letter-spacing: 0.25rem;
+    color: var(--color-white);
+    margin:0;
+}
+.hero .hero__text h1{
+    font-family: "Bellefair", sans-serif;
+    font-size: 9rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--color-white);
+    margin: 0;
+}
+.hero .hero__text .description{
+    font-family: "Barlow", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    letter-spacing: 0;
+    color: var(--color-white);
+    margin:0;
+    max-width: 60ch;
+}
+
+.hero .hero__button{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+.hero .hero__button a{
+    color: var(--color-blue-900);
+    background-color: var(--color-white);
+    text-decoration: none;
+    padding-inline: 4.25rem;
+    padding-block : 7.375rem;
+    border-radius:50%;
+    font-family: "Bellefair", sans-serif;
+    font-size: 2rem;
+    line-height: normal;
+    letter-spacing: 0;
+    margin-bottom: 2.21875rem;
+}
