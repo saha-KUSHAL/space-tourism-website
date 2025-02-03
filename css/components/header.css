@@ -1,20 +1,23 @@
-header{
+header {
     position: sticky;
     top: 0;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 4rem;
     padding-top: 1.25rem;
 
-}nav img{
-     height: 3rem;
-     width: 3rem;
- }
+}
 
-.inline-line{
+nav img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.inline-line {
     height: 1px;
     width: 100%;
     background-color: var(--color-white);
@@ -22,7 +25,7 @@ nav{
     margin-left: 4rem;
 }
 
-nav ol{
+nav ol {
     display: flex;
     color: var(--color-white);
     background-color: rgba(255, 255, 255, 0.05);
@@ -30,37 +33,51 @@ nav ol{
     list-style: none;
     counter-reset: my-counter;
     padding-block: 2.375rem;
-    padding-right:1rem;
+    padding-right: 1rem;
     padding-left: 8.4375rem;
 }
-nav li{
+
+nav li {
     margin-inline: 1.5rem;
     counter-increment: my-counter;
-    font-family: "Barlow Condensed", sans-serif ;
-    font-weight: 500 ; /* Regular*/
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500; /* Regular*/
     font-size: 1rem;
     line-height: 19.2%;
     letter-spacing: 0.125rem;
     position: relative;
-    transition: all 2s ease-in-out;
+    transition: all 2s;
 }
-nav li::before{
+
+nav li::before {
     content: counter(my-counter, decimal-leading-zero);
     padding-right: 0.75rem;
     font-weight: 700; /* Bold */
 }
-nav li a{
+
+nav li a {
     color: var(--color-white);
     text-decoration: none;
 }
-nav li:hover::after{
-    content:"";
+
+nav li::after {
+    content: "";
     position: absolute;
+    opacity: 0;
     background-image: linear-gradient(hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0.10));
     height: 4.875rem;
     width: 100%;
     top: -2.375rem;
     left: 0;
-    z-index:-1;
+    z-index: -1;
     border-bottom: 3px solid var(--color-white);
+    -webkit-transition: opacity 150ms ease-in-out;
+    -moz-transition: opacity 150ms ease-in-out;
+    -ms-transition: opacity 150ms ease-in-out;
+    -o-transition: opacity 150ms ease-in-out;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav li:hover::after {
+    opacity: 1;
 }
